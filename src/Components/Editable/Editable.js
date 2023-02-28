@@ -16,7 +16,7 @@ export default function Editable(props){
                 if(props.onSubmit)props.onSubmit();
              }}
             >
-                <input
+                <input 
                  type="text" 
                  placeholder={props.placeholder || "Enter item"}/>
                 <div className="editable_edit_footer">
