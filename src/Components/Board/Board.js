@@ -19,7 +19,7 @@ function Board(){
                 <Card/>
                 <Editable 
                   displayClass="boards_cards_add"
-                  text="Add Card"
+                  text="Add Task"
                   placeholder="Enter card title"  
                 />
             </div>
