@@ -4,6 +4,7 @@ import TextArea from './Components/TextArea';
 import { Box,Grid,Text,Flex } from '@chakra-ui/react';
 import Board from './Components/Board/Board';
 import './Global/global.css'
+import Editable from './Components/Editable/Editable';
 
 function App() {
   return <div className='app'>
@@ -14,7 +15,12 @@ function App() {
       <div className='app_boards'>
         <Board/>
         <Board/>
-        <Board/>
+        <div className='app_boards_board'>
+        <Editable 
+        text="Add Board"
+        placeholder="Enter board title"
+        ></Editable>
+        </div>
       </div>
     </div>
     </div>  
