@@ -16,9 +16,10 @@ function App() {
         <Board/>
         <Board/>
         <div className='app_boards_board'>
-        <Editable 
-        text="Add Board"
-        placeholder="Enter board title"
+          <Editable 
+          displayClass="app_boards_board_add"
+          text="Add Board"
+          placeholder="Enter board title"
         ></Editable>
         </div>
       </div>
