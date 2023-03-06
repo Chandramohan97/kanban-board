@@ -71,6 +71,22 @@ const removeCard=(cid,bid) =>{
   }
 }
 
+const addBoard = (title) =>{
+  setBoards([
+    ...boards,
+    {
+      id : Date.now() + Math.random(),
+      title : title,
+      cards :[]
+    }
+  ])
+}
+
+const removeBoard = bid =>{
+  const tempBoards = boards.filter(item => item.id !==bid)
+  setBoards(tempBoards);
+}
+
   return <div className='app'>
     <div className='app_navbar'>
         <h2>Kanban</h2>
