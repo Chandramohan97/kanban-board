@@ -2,21 +2,31 @@ import React from "react";
 import { CheckSquare, Clock, MoreHorizontal } from "react-feather";
 import './Card.css'
 import Chip from "../../Chip/Chip";
-function Card(){
+function Card(props){
     return(
         <div className="card">
             <div className="card_top">
                 <div className="card_top_labels">
-                    <Chip text="Frontend" color="green" />
+                    {
+                      props.card.labels.map((item,index) =>
+                      <Chip 
+                      label={item}
+                      text ={item.text}
+                      color={item.color}
+                      />
+                      )
+                    }
                 </div >
                 <MoreHorizontal  />
             </div>
             <div className="card_title">
-                asfafsa
+                {props.card.title}
             </div>
         
             <div className="card_footer">
-                <p><Clock/>28th Feb</p>
+             {  props.card.date && 
+                <p><Clock/>{props.card.date}</p>
+             }     
                 <p><CheckSquare/>1/4</p>
             </div>
         </div>
