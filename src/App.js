@@ -105,7 +105,9 @@ const removeBoard = bid =>{
           <Editable 
           displayClass="app_boards_board_add"
           text="Add Board"
+          buttonText="Add"
           placeholder="Enter board title"
+          onSubmit={value=>addBoard(value)}
         ></Editable>
         </div>
       </div>
@@ -117,26 +119,4 @@ const removeBoard = bid =>{
 export default App;
 
 
- // <Grid templateColumns="repeat(3, 20vw)"  gap={[4,8,12]} py={["10vh", "20vh"]}   px={["5vw", "10vw", "20vw"]}>
-    //   <Box bg="gray.100" p={[2,4]} height="60vh" borderRadius="md" >
-    //     <Text fontSize={["sm", "md", "lg"]} fontWeight="semibold"> New </Text>
-    //     <Flex direction="column" align="center" gap="4" my>
-    //       <TextArea value="Board 1" />
-    //       <TextArea value="Board 2" />
-    //     </Flex>
-    //   </Box>
-    //   <Box bg="gray.100" p={[2,4]} borderRadius="md">
-    //     <Text fontSize={["sm", "md", "lg"]} fontWeight="semibold"> In Progress </Text>
-    //     <Flex direction="column" align="center" gap="4" my>
-    //       <TextArea value="Board 3" />
-    //       <TextArea value="Board 4" /> 
-    //     </Flex>
-    //   </Box>
-    //   <Box bg="gray.100" p={[2,4]} borderRadius="md">
-    //   <Text fontSize={["sm", "md", "lg"]} fontWeight="semibold"> Complete </Text>
-    //   <Flex direction="column" align="center" gap="4" my>
-    //       <TextArea value="Board 5" />
-    //       <TextArea value="Board 6" />
-    //   </Flex>
-    //   </Box>
-    // </Grid>
+ 

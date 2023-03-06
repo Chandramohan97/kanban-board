@@ -5,7 +5,7 @@ import './Editable.css'
 
 export default function Editable(props){
     const [showEdit,setShowEdit] = React.useState(false);
-
+    const [inputValue,setInputValue] = React.useState(" ")
     console.log(showEdit)
     return (
         <div className="editable">
@@ -13,11 +13,15 @@ export default function Editable(props){
             <form className="editable_edit"
              onSubmit={(event) =>{
                 event.preventDefault();
-                if(props.onSubmit)props.onSubmit();
+                props.onSubmit(inputValue);
+                setShowEdit(false)
              }}
             >
                 <input 
-                 type="text" 
+                 autoFocus
+                 type="text"
+                 defaultValue=""
+                 onChange={(e) => setInputValue(e.target.value)}
                  placeholder={props.placeholder || "Enter item"}/>
                 <div className="editable_edit_footer">
                     <button type="submit">{props.buttonText || "Add"}</button>
