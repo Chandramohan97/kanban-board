@@ -5,6 +5,7 @@ import './Editable.css'
 
 export default function Editable(props){
     const [showEdit,setShowEdit] = React.useState(false);
+    const [inputValue,setInputValue] = React.useState(props.text || "");    
 
     console.log(showEdit)
     return (

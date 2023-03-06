@@ -104,7 +104,7 @@ const removeBoard = bid =>{
         <div className='app_boards_board'>
           <Editable 
           displayClass="app_boards_board_add"
-          text="Add Board"
+          text="Add Card"
           placeholder="Enter board title"
         ></Editable>
         </div>
